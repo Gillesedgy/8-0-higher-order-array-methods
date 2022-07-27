@@ -28,7 +28,10 @@ if (song.title === "Pink Elephants"){
  * @returns {Object} A single object.
  */
 function findFirstSongUnderThreeMinutes(songs) {
-  
+  const underThree = songs.find(song => {
+    if(song.runtimeInSeconds <= 180) return song.title
+  })
+  return underThree;
 }
 
 /**
