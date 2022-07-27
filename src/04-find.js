@@ -39,7 +39,14 @@ function findFirstSongUnderThreeMinutes(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstTitleTrack(songs) {}
+function findFirstTitleTrack(songs) {
+  const track = songs.find(song =>{
+if(song.title === song.album ){
+  return song.title
+}
+  })
+  return track;
+}
 
 module.exports = {
   findPinkElephantsByTimestreet,
