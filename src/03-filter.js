@@ -29,7 +29,7 @@ function getSongsBySaib(songs) {
  */
 function getSongsOverThreeMinutes(songs) {
   const threeOrMore = songs.filter(song => {
-    if(song.runtimeInSeconds >= 180){
+    if(song.runtimeInSeconds > 180){
       return song.title;
     }
   })
@@ -42,11 +42,10 @@ function getSongsOverThreeMinutes(songs) {
  * @returns {Object[]} An array of objects.
  */
 function getTitleTracks(songs) {
-  
+
   const sameAs = songs.filter((song) =>{
   if (song.title === song.album) return song.title
   })
-
   return sameAs;
 }
 

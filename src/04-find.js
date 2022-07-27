@@ -29,7 +29,7 @@ if (song.title === "Pink Elephants"){
  */
 function findFirstSongUnderThreeMinutes(songs) {
   const underThree = songs.find(song => {
-    if(song.runtimeInSeconds <= 180) return song.title
+    if(song.runtimeInSeconds < 180) return song.title
   })
   return underThree;
 }
@@ -42,7 +42,7 @@ function findFirstSongUnderThreeMinutes(songs) {
 function findFirstTitleTrack(songs) {
   const track = songs.find(song =>{
 if(song.title === song.album ){
-  return song.title
+  return song
 }
   })
   return track;
