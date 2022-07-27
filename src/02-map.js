@@ -30,10 +30,10 @@ function getSongTitles(songs) {
  *  //> [ "Berlin Tsukin by Taiyo Ky", "Up by Sebastian Kamae", ... ]
  */
 function getSongDetails(songs) {
-  const theDtails = songs.map((song) => {
-    return song.title
+  const theDetails = songs.map((song) => {
+    return `${song.title} by ${song.artist}`
   } ) 
-  theDetails
+  return theDetails;
 }
 
 /**
