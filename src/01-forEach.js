@@ -30,8 +30,8 @@ songs.forEach((song) => {
  *  //> ...
  */
 function printSongDetails(songs) {
-  songs.forEach((song) => {
-    console.log(`${song.title} by ${song.artist}`)
+  songs.forEach(({title, artist}) => {
+console.log(`${title} by ${artist}`)
   })
 }
 
@@ -40,7 +40,7 @@ function printSongDetails(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
 function printSongTitlesOverThreeMinutes(songs) {
-  songs.forEach((song) => {
+  songs.forEach((song) =>{
     if (song.runtimeInSeconds >= 180){
       console.log(song.title)
     }
